@@ -60,18 +60,107 @@
 
   <!-- Services Section -->
   <section id="services">
-    <div class="container col-lg-10 col-8" data-aos="fade-up" data-aos-delay="200">
-      <h2>What We Offer</h2>
-      <div class="service-grid">
-        <div class="service-card" data-aos="fade-up" data-aos-delay="300">Full Event Planning</div>
-        <div class="service-card" data-aos="fade-up" data-aos-delay="300">Birthday Parties</div>
-        <div class="service-card" data-aos="fade-up" data-aos-delay="300">Weddings</div>
-        <div class="service-card" data-aos="fade-up" data-aos-delay="300">Corporate & Social Events</div>
-        <div class="service-card" data-aos="fade-up" data-aos-delay="300">Decor & Venue Setup</div>
-        <div class="service-card" data-aos="fade-up" data-aos-delay="300">Catering & Entertainment</div>
-      </div>
+    <div class="container col-lg-12 col-8 p-0">
+        <div class="text-center mb-5">
+            <h6>FEATURES</h6>
+            <h2>Our Features & Services.</h2>
+        </div>
+        
+        <div class="row g-4" id="service-cards">
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <div class="feature-img-container">
+                        <img src="./Assets/img.png" alt="Full Event Planning" class="feature-img">
+                    </div>
+                    <div class="card-content">
+                        <h4 class="card-title">Full Event Planning</h4>
+                        <p class="card-text">
+                            Comprehensive planning for all types of events.
+                        </p>
+                        <a href="#" class="card-link">MORE</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <div class="feature-img-container">
+                        <img src="./Assets/img 2.jpg" alt="Birthday Parties" class="feature-img">
+                    </div>
+                    <div class="card-content">
+                        <h4 class="card-title">Birthday Parties</h4>
+                        <p class="card-text">
+                            Making birthdays memorable and special.
+                        </p>
+                        <a href="#" class="card-link">MORE</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <div class="feature-img-container">
+                        <img src="./Assets/img 3.jpg" alt="Weddings" class="feature-img">
+                    </div>
+                    <div class="card-content">
+                        <h4 class="card-title">Weddings</h4>
+                        <p class="card-text">
+                            Creating the perfect day for your special occasion.
+                        </p>
+                        <a href="#" class="card-link">MORE</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row g-4" id="service-cards" style="display: none;">
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <div class="feature-img-container">
+                        <img src="./Assets/img 15.jpg" alt="Corporate & Social Events" class="feature-img">
+                    </div>
+                    <div class="card-content">
+                        <h4 class="card-title">Corporate & Social Events</h4>
+                        <p class="card-text">
+                            Professional planning for business and social gatherings.
+                        </p>
+                        <a href="#" class="card-link">MORE</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <div class="feature-img-container">
+                        <img src="./Assets/img 5.jpg" alt="Decor & Venue Setup" class="feature-img">
+                    </div>
+                    <div class="card-content">
+                        <h4 class="card-title">Decor & Venue Setup</h4>
+                        <p class="card-text">
+                            Transforming spaces into memorable settings.
+                        </p>
+                        <a href="#" class="card-link">MORE</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <div class="feature-img-container">
+                        <img src="./Assets/img 14.jpg" alt="Catering & Entertainment" class="feature-img">
+                    </div>
+                    <div class="card-content">
+                        <h4 class="card-title">Catering & Entertainment</h4>
+                        <p class="card-text">
+                            Complete solutions for food and entertainment.
+                        </p>
+                        <a href="#" class="card-link">MORE</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </section>
+</section>
 
 <!-- Gallery Section -->
 <section id="gallery">
@@ -173,10 +262,10 @@
     <div class="floating-element" style="top: 80%; left: 25%; animation-delay: 9s;"></div>
   </div>
   
-  <div class="container col-lg-12 col-8">
+  <div class="container col-lg-12 col-10">
     <h2 class="text-white mb-4 text-center">What Our Clients Say</h2>
     
-    <div class="testimonial-box p-4">
+    <div class="testimonial-box p-4" data-aos="fade-up" data-aos-delay="100" \>
       <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
@@ -290,7 +379,7 @@
   
   <!-- Contact Section -->
   <section id="contact">
-    <div class="container col-lg-6 col-10">
+    <div class="container col-lg-6 col-10 p-5">
       <h2>Contact Us</h2>
       <p>Email: Choplifeevents@outlook.com/p>
       <p>Phone: +234 811 2188 176</p>
@@ -315,6 +404,33 @@
       <p>&copy; 2025 CHOPLIFE EVENTS. All rights reserved.</p>
     </div>
   </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const rows = document.querySelectorAll('#service-cards');
+        let currentRow = 0;
+
+        function switchRows() {
+            rows[currentRow].classList.add('fade-out');
+            
+            setTimeout(() => {
+                rows[currentRow].style.display = 'none';
+                
+                currentRow = (currentRow + 1) % rows.length;
+                
+                rows[currentRow].style.display = 'flex';
+                rows[currentRow].classList.remove('fade-out');
+            }, 1000);
+        }
+
+        // Initial setup
+        rows[0].style.display = 'flex';
+        rows[1].style.display = 'none';
+
+        // Switch rows every 5 seconds
+        setInterval(switchRows, 5000);
+    });
+</script>
 
   <script>
     document.querySelectorAll('.nav-link').forEach(link => {
