@@ -15,7 +15,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
 </head>
 <body>
-
+  <!-- Header Section -->
   <div class="p-1" style="background-color: #191919;" >
     <header class="container d-flex flex-wrap justify-content-center align-items-center py-3">
       <a href="#hero" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-decoration-none">
@@ -24,7 +24,7 @@
       
       
 
-      <ul class="nav nav-pills">
+      <ul class="nav nav-pills justify-content-center">
         <li class="nav-item"><a href="#hero" class="nav-link active" aria-current="page">Home</a></li>
         <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
         <li class="nav-item"><a href="#gallery" class="nav-link">Gallery</a></li>
@@ -34,7 +34,7 @@
     </header>
   </div>
 
-  <!-- Hero Section -->
+
 <!-- Hero Section -->
 <section id="hero" style="background-color: #191919;">
   <div class="hero-content px- pt- my-5 text-center" data-aos="fade-down" data-aos-duration="1000">
@@ -166,9 +166,9 @@
 <section id="gallery">
   <div class="container-fluid px-0">
     <h2 class="text-center mb-5">Gallery</h2>
-    <div class="gallery-container col-lg-12 col-12">
+    <div class=" gallery-container col-lg-12 col-12">
       <!-- Card 1 -->
-      <div class="gallery-card" data-aos="fade-up" data-aos-delay="50">
+      <div class=" mb-3 gallery-card" data-aos="fade-up" data-aos-delay="50">
         <div class="card-image-container">
           <img src="./Assets/img 6.jpg" alt="Event Image" class="img-fluid default-img">
           <img src="./Assets/img 7.jpg" alt="Event Image Hover" class="img-fluid hover-img">
@@ -180,7 +180,7 @@
       </div>
       
       <!-- Card 2 -->
-      <div class="gallery-card" data-aos="flip-left" data-aos-delay="100">
+      <div class=" mb-3 gallery-card" data-aos="flip-left" data-aos-delay="100">
         <div class="card-image-container" >
           <img src="./Assets/img 8.jpg" alt="Wedding Image" class="img-fluid default-img">
           <img src="./Assets/img 9.jpg" alt="Wedding Image Hover" class="img-fluid hover-img">
@@ -192,7 +192,7 @@
       </div>
       
       <!-- Card 3 -->
-      <div class="gallery-card" data-aos="flip-left" data-aos-delay="150">
+      <div class=" mb-3 gallery-card" data-aos="flip-left" data-aos-delay="150">
         <div class="card-image-container">
           <img src="./Assets/img 10.jpg" alt="Party Image" class="img-fluid default-img">
           <img src="./Assets/img 11.jpg" alt="Party Image Hover" class="img-fluid hover-img">
@@ -358,15 +358,15 @@
     <h2 class="text-center mb-5">About Us</h2>
     <div class="row justify-content-center">
       <div class="col-lg-8">
-        <p class="about-text">
+        <p class="about-text" data-aos="flip-left" data-aos-delay="50">
           CHOPLIFE EVENTS is your premium event planning partner, dedicated to transforming ordinary celebrations into extraordinary memories. Our commitment to excellence drives us to deliver personalized, creative, and flawlessly executed events that exceed expectations.
         </p>
         <hr class="about-divider">
-        <p class="about-text">
+        <p class="about-text" data-aos="flip-left" data-aos-delay="100">
           With a team of experienced planners and creative designers, we specialize in bringing your vision to life with precision and elegance. From grand weddings and corporate events to intimate birthday parties, we handle every detail with care, ensuring your celebration is as unique as you are.
         </p>
         <hr class="about-divider">
-        <p class="about-text">
+        <p class="about-text" data-aos="flip-left" data-aos-delay="150">
           Our approach combines professionalism with passion, resulting in stress-free planning and spectacular outcomes. We believe every celebration deserves the CHOPLIFE touch—where creativity meets precision, and dreams become reality.
         </p>
         <div class="text-center mt-4">
@@ -428,7 +428,7 @@
         rows[1].style.display = 'none';
 
         // Switch rows every 5 seconds
-        setInterval(switchRows, 5000);
+        setInterval(switchRows, 10000);
     });
 </script>
 

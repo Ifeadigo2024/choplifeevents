@@ -365,7 +365,7 @@ body {
   max-width: 33.333333%;
   padding: 0 15px;
   box-sizing: border-box;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
   display: flex; /* Add this to allow child to expand */
 }
 
@@ -396,7 +396,7 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
-  max-width: 1200px;
+  max-width: 90%;
   margin: 0 auto;
 }
 
@@ -765,26 +765,6 @@ body[data-aos-delay="400"] [data-aos].aos-animate {
   }
 }
 
-/* About Section */
-.about {
-  padding: 60px 30px;
-  background-color: #fff;
-}
-
-.about-text {
-  max-width: 70%;
-  margin: 0 auto;
-}
-
-.about-text h2 {
-  font-size: 32px;
-}
-
-.about-text p {
-  font-size: 16px;
-  line-height: 1.6;
-}
-
 /* Mobile Adjustment for About Section */
 @media (max-width: 1024px) {
   .about-text {
@@ -803,15 +783,13 @@ body[data-aos-delay="400"] [data-aos].aos-animate {
 @media (max-width: 767px) {
   .about-text {
     max-width: 100%; /* Full width on small devices */
-    text-align: justify;
+    margin: 20px;
+    font-size: 15px;
+    
   }
 
   .about-text h2 {
     font-size: 24px;
-  }
-
-  .about-text p {
-    font-size: 14px;
   }
 
   .about-img {
