@@ -8,7 +8,7 @@ body {
   }
   
   h1, h2 {
-    font-family: 'Playfair Display', sans-serif !important;
+    font-family: 'Playfair Display', sans-serif;
     color: #ffffff !important;
     margin-bottom: 0.5em;
     font-weight: bolder !important;
@@ -32,6 +32,177 @@ body {
   .nav-link {
     color: #ffffff !important;
   }
+
+/* Header Styles */
+.header {
+  background-color: #ffffff;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+}
+
+.navbar-brand img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.brand-name {
+  font-weight: bold;
+  color: #ff9800;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu li {
+  margin: 0 15px;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+  color: #ff9800;
+}
+
+/* Contact Button Styles */
+.btn-contact {
+  background-color: #f8c838;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.btn-contact:hover {
+  background-color: #f8c838;
+}
+
+/* Mobile Menu Toggle */
+.navbar-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.toggle-icon {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  position: relative;
+}
+
+.toggle-icon::before,
+.toggle-icon::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  left: 0;
+}
+
+.toggle-icon::before {
+  top: -8px;
+}
+
+.toggle-icon::after {
+  top: 8px;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #191919;
+  z-index: 1001;
+  padding-top: 80px;
+}
+
+.mobile-menu.active {
+  display: block;
+}
+
+.mobile-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mobile-menu li {
+  padding: 15px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.close-menu {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .navbar-toggle {
+    display: block;
+  }
+  
+  .main-nav {
+    display: none;
+  }
+}
   
 /* Hero Section */
 #hero {
@@ -354,6 +525,9 @@ body {
 #gallery {
   background-color: #000000;
   padding: 80px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center align the content vertically */
 }
 
 #gallery h2 {
@@ -365,8 +539,13 @@ body {
 .gallery-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: center; /* Center align the cards horizontally */
   gap: 20px;
+  width: 100%; /* Ensure the container takes the full width */
+}
+
+.row {
+  margin-left: 0 !  ;
 }
 
 .gallery-card {
@@ -460,7 +639,7 @@ body {
 
 @media (max-width: 576px) {
   .gallery-card {
-    width: calc(50% - 15px);
+    width: calc(100% - 15px);
     min-width: 100%;
   }
 }
