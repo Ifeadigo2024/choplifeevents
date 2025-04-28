@@ -5,6 +5,7 @@ body {
     background-color: #191919;
     color: #ffffff !important;
     scroll-behavior: smooth;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
   }
   
   h1, h2 {
