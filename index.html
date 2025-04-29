@@ -12,6 +12,9 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
 
+  <!-- Other meta tags and links -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
 </head>
 <body>
@@ -31,10 +34,10 @@
     
     <nav class="main-nav" id="main-nav">
       <ul class="nav-menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#gallery">Gallery</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#youtube">Youtube</a></li>
-        <li><a href="#blog">Blog</a></li>
         <li><a href="#contact" class="btn-contact">Contact</a></li>
       </ul>
     </nav>
@@ -50,10 +53,10 @@
     </svg>
   </button>
   <ul>
-    <li><a href="#about">About</a></li>
-    <li><a href="#portfolio">Portfolio</a></li>
-    <li><a href="#youtube">Youtube</a></li>
-    <li><a href="#blog">Blog</a></li>
+    <li><a href="#about">Home</a></li>
+    <li><a href="#portfolio">Services</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#blog">About</a></li>
     <li><a href="#contact" class="btn-contact">Contact</a></li>
   </ul>
 </div>
@@ -61,19 +64,24 @@
 
 <!-- Hero Section -->
 <section id="hero">
+  <div class="slider-container">
+    <div class="slider">
+      <!-- Slider will be populated via CSS -->
+    </div>
+  </div>
   <div class="hero-overlay"></div>
-  <div class="container hero-content col-lg-12 col-10">
+  <div class="container hero-content col-lg-12 col-11">
     <div class="hero-text">
-      <h1 class="hero-heading">
+      <h1 class="hero-heading" data-aos="fade-up" data-aos-delay="100">
         <span class="celebrate-text">Let's Celebrate Your</span><br>
         <span id="rotating-text" class="rotating-text">Social</span>
         <span class="party-text"><br>Party Together</span>
       </h1>
-      <p class="hero-description">
+      <p class="hero-description" data-aos="fade-up" data-aos-delay="150">
         Experiences are what shapes us. We love creating <strong>EXCEPTIONAL</strong> experiences. From conception to execution, we craft unique guest journeys that turn ordinary moments into extraordinary memories.
       </p>
     </div>
-    <div class="hero-actions">
+    <div class="hero-actions" data-aos="fade-right" data-aos-delay="200">
       <a href="#contact" class="cta-button primary-button">
         <span class="cta-text">Contact Us</span>
         <span class="cta-icon">→</span>
@@ -94,8 +102,8 @@
 <section id="services">
   <div class="container col-lg-12 col-10 p-0">
     <div class="text-center mb-5">
-      <h6>FEATURES</h6>
-      <h2>Our Features & Services.</h2>
+      
+      <h2 style="color: #f8c838 !important;">Our Features & Services.</h2>
     </div>
     
     <div class="row g-4" id="service-cards"> 
@@ -199,7 +207,7 @@
   <div class="container-fluid px-0">
     <div style="margin: 0px;" class="row">
       <div class="col-lg-11 col-10 mx-auto text-center">
-        <h2 class="mb-5">Gallery</h2>
+        <h2 style="color: #f8c838 !important;" class="mb-5">Gallery</h2>
         <div class="gallery-container d-flex justify-content-center flex-wrap gap-30">
           <!-- Card 1 -->
           <div class="mb-3 gallery-card" data-aos="fade-up" data-aos-delay="50">
@@ -285,7 +293,7 @@
 
 <!-- Statistics Section -->
 <section id="stats">
-  <div class="container">
+  <div class="container" data-aos="fade-up" data-aos-delay="200">
     <div class="row">
       <div class="col-lg-12 col-10 mx-auto">
         <div class="stats-container">
@@ -376,38 +384,129 @@
   </div>
 </section>
   
-  <!-- Contact Section -->
-  <section id="contact">
-    <div class="container col-lg-6 col-10 p-5">
-      <h2>Contact Us</h2>
-      <p>Email: Choplifeevents@outlook.com/p>
-      <p>Phone: +234 811 2188 176</p>
-      <div class="socials">
-        <a href="#">Instagram</a>
-        <a href="#">Facebook</a>
-        <a href="#">WhatsApp</a>
-        <a href="#">TikTok</a>
-      </div>
-      <form>
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
+<!-- Contact Section -->
+<section id="contact">
+  <div class="container col-lg-6 col-10 p-5" data-aos="fade-up" data-aos-delay="300">
+    <h2>Contact Us</h2>
+    <p>Email: Choplifeevents@outlook.com</p>
+    <p>Phone: +234 811 2188 176</p>
+    <div class="socials">
+      <a href="https://www.instagram.com/username" class="social--icon" target="_blank">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.facebook.com/username" class="social--icon" target="_blank">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://api.whatsapp.com/send?phone=+2348112188176" class="social--icon" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+      <a href="https://www.tiktok.com/@username" class="social--icon" target="_blank">
+        <i class="fab fa-tiktok"></i>
+      </a>
     </div>
-  </section>
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" placeholder="Your Message" required></textarea>
+      <input type="text" id="eventType" placeholder="Event Type (e.g., wedding, birthday, corporate)" required>
+      <input type="date" id="eventDate" required>
+      <input type="text" id="eventLocation" placeholder="Location" autocomplete="on" required>
+      <input type="number" id="guestCount" placeholder="Number of Guests" required>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</section>
 
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 CHOPLIFE EVENTS. All rights reserved.</p>
+<!-- Footer -->
+<footer>
+  <div class="footer-container">
+    <div class="footer-section">
+      <div class="footer-logo">
+        <img src="./Assets/536-x-150-white.png" alt="Eventigo Logo">
+        <p>We love creating exceptional experiences. From conceptualization to execution. We love the process of creating unique guest experiences.</p>
+      </div>
     </div>
-  </footer>
+    <div class="footer-section">
+      <h3>Quick links</h3>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h3>Connect with us</h3>
+      <div class="contact-info">
+        <p>+2347030856845</p>
+        <p>info@myeventigo.com</p>
+      </div>
+      <div class="social-links">
+        <a href="#" class="social-icon">●</a>
+        <a href="#" class="social-icon">●</a>
+        <a href="#" class="social-icon">●</a>
+        <a href="#" class="social-icon">●</a>
+        <a href="#" class="social-icon">●</a>
+        <a href="#" class="social-icon">●</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 CHOPLIFE EVENTS. All rights reserved.</p>
+  </div>
+</footer>
 
 
 
 
   <script>
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const contactForm = document.getElementById('contactForm');
+        
+        if (contactForm) {
+          contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            const eventType = document.getElementById('eventType').value;
+            const eventDate = document.getElementById('eventDate').value;
+            const eventLocation = document.getElementById('eventLocation').value;
+            const guestCount = document.getElementById('guestCount').value;
+            
+            if (!name || !email || !message || !eventType || !eventDate || !eventLocation || !guestCount) {
+              alert('Please fill in all fields');
+              return;
+            }
+            
+            const formattedMessage = encodeURIComponent(`
+    Hello CHOPLIFE EVENTS,
+    I'm interested in your event planning services. Please let me know how we can get started.
+
+    Here are a few details about my event:
+    • Event Type: ${eventType}
+    • Date: ${eventDate}
+    • Location: ${eventLocation}
+    • Number of Guests: ${guestCount}
+
+    ${message}
+
+    Looking forward to your response. Thank you!
+    `);
+            const whatsappURL = `https://api.whatsapp.com/send?phone=+2348112188176&text=${formattedMessage}`;
+            
+            window.open(whatsappURL, '_blank');
+            
+            contactForm.reset();
+            
+            alert('Message sent to WhatsApp!');
+          });
+        }
+      });
+
     // JavaScript for rotating hero text
     const heroMessages = [
       "Social",
