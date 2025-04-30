@@ -235,7 +235,7 @@ body {
   background-repeat: no-repeat;
   animation: slider 20s infinite;
   opacity: 0.6; /* Reduced opacity */
-}
+} 
 
 @keyframes slider {
   0% {
