@@ -376,7 +376,7 @@
         <p class="about-text" data-aos="flip-left" data-aos-delay="150">
           Our approach combines professionalism with passion, resulting in stress-free planning and spectacular outcomes. We believe every celebration deserves the CHOPLIFE touch—where creativity meets precision, and dreams become reality.
         </p>
-        <div class="text-center mt-4">
+        <div class="text-center mt-4" data-aos="fade-up" data-aos-delay="250">
           <a href="#contact" class="btn gold">Let's Create Magic Together</a>
         </div>
       </div>
@@ -386,18 +386,18 @@
   
 <!-- Contact Section -->
 <section id="contact">
-  <div class="container col-lg-6 col-10 p-5" data-aos="fade-up" data-aos-delay="300">
+  <div class="container col-lg-6 col-10 py-5" data-aos="fade-up" data-aos-delay="300">
     <h2>Contact Us</h2>
     <p>Email: Choplifeevents@outlook.com</p>
     <p>Phone: +234 811 2188 176</p>
     <div class="socials">
-      <a href="https://www.instagram.com/username" class="social--icon" target="_blank">
+      <a href="https://www.instagram.com/choplifeevents.ng" class="social--icon" target="_blank">
         <i class="fab fa-instagram"></i>
       </a>
       <a href="https://www.facebook.com/username" class="social--icon" target="_blank">
         <i class="fab fa-facebook-f"></i>
       </a>
-      <a href="https://api.whatsapp.com/send?phone=+2348112188176" class="social--icon" target="_blank">
+      <a href="https://wa.link/3kjncq" class="social--icon" target="_blank">
         <i class="fab fa-whatsapp"></i>
       </a>
       <a href="https://www.tiktok.com/@username" class="social--icon" target="_blank">
@@ -462,50 +462,50 @@
 
   <script>
 
-    document.addEventListener('DOMContentLoaded', function() {
-        const contactForm = document.getElementById('contactForm');
-        
-        if (contactForm) {
-          contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.getElementById('contactForm');
             
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
-            const eventType = document.getElementById('eventType').value;
-            const eventDate = document.getElementById('eventDate').value;
-            const eventLocation = document.getElementById('eventLocation').value;
-            const guestCount = document.getElementById('guestCount').value;
-            
-            if (!name || !email || !message || !eventType || !eventDate || !eventLocation || !guestCount) {
-              alert('Please fill in all fields');
-              return;
+            if (contactForm) {
+              contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const message = document.getElementById('message').value;
+                const eventType = document.getElementById('eventType').value;
+                const eventDate = document.getElementById('eventDate').value;
+                const eventLocation = document.getElementById('eventLocation').value;
+                const guestCount = document.getElementById('guestCount').value;
+                
+                if (!name || !email || !message || !eventType || !eventDate || !eventLocation || !guestCount) {
+                  alert('Please fill in all fields');
+                  return;
+                }
+                
+                const formattedMessage = encodeURIComponent(`
+        Hello CHOPLIFE EVENTS,
+        I'm interested in your event planning services. Please let me know how we can get started.
+
+        Here are a few details about my event:
+        • Event Type: ${eventType}
+        • Date: ${eventDate}
+        • Location: ${eventLocation}
+        • Number of Guests: ${guestCount}
+
+        ${message}
+
+        Looking forward to your response. Thank you!
+        `);
+                const whatsappURL = `https://api.whatsapp.com/send?phone=+2348112188176&text=${formattedMessage}`;
+                
+                window.open(whatsappURL, '_blank');
+                
+                contactForm.reset();
+                
+                alert('Message sent to WhatsApp!');
+              });
             }
-            
-            const formattedMessage = encodeURIComponent(`
-    Hello CHOPLIFE EVENTS,
-    I'm interested in your event planning services. Please let me know how we can get started.
-
-    Here are a few details about my event:
-    • Event Type: ${eventType}
-    • Date: ${eventDate}
-    • Location: ${eventLocation}
-    • Number of Guests: ${guestCount}
-
-    ${message}
-
-    Looking forward to your response. Thank you!
-    `);
-            const whatsappURL = `https://api.whatsapp.com/send?phone=+2348112188176&text=${formattedMessage}`;
-            
-            window.open(whatsappURL, '_blank');
-            
-            contactForm.reset();
-            
-            alert('Message sent to WhatsApp!');
           });
-        }
-      });
 
     // JavaScript for rotating hero text
     const heroMessages = [
